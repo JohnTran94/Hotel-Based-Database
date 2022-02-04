@@ -1,0 +1,31 @@
+## DB Setup Guide
+login to flip server
+mkdir hotelDB
+cd hotelDB
+
+ftp files to flip server hotelDB or manually paste them with vim
+hotelDB.sql
+insert_hotel_data.sql
+
+mysql -u cs340_<ID> -h classmysql.engr.oregonstate.edu -p
+USE cs340_<ID>;
+
+source ./1_data-definition-queries.sql;
+source ./2_insert-hotel-sample-data.sql;
+source ./3_data-manipulation.sql;
+
+
+## How to add files to flip without ftp
+cd hotelDB
+vim hotelDB.sql
+copy everything in hotelDB.sql
+press i (let's you insert)
+right click to paste data
+press esc (to get out of insert mode)
+:wq (to save)
+
+repeat for other scripts
+
+## How to run Web App
+npm install
+node app.js
